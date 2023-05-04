@@ -1,6 +1,9 @@
 import React from 'react';
 import { View } from 'react-native';
 import SplashScreen from './Components/Muslove/SplashScreen';
+import Connexion from './Components/Muslove/Connexion';
+import MonCode from './Components/Muslove/MonCode';
+
 
 
 
@@ -8,7 +11,9 @@ import SplashScreen from './Components/Muslove/SplashScreen';
 const App = () => {
   return (
     <View>
-      <SplashScreen />
+      {/* <SplashScreen /> */}
+      <Connexion />
+      {/* <MonCode /> */}
     </View>
   );
 };
