@@ -1,11 +1,13 @@
 import React, { useState, useRef } from 'react'
 import { Image, StyleSheet, View, Text, TouchableOpacity, Pressable, Alert } from 'react-native'
-
+import PhoneInput from 'react-native-phone-number-input';
 
 const Connexion = () => {
-
+    const [phoneNumber, setphoneNumber] = useState('');
+    const phoneInput = useRef(null);
     return (
-        <View style={styles.container1}>
+
+        <View >
             <View style={styles.img}>
                 <Image source={require("../Muslove/Assests/secondpagelogo.png")}
                     style={styles.logo}
@@ -18,7 +20,22 @@ const Connexion = () => {
                 <Text style={styles.text1}>Connexion</Text>
                 <Text style={styles.text2}>Welcome to Muslove</Text>
             </View>
-
+            <View style={styles.container}>
+                <PhoneInput
+                    ref={phoneInput}
+                    defaultValue={phoneNumber}
+                    placeholder='123456789'
+                    defaultCode="FR"
+                    layout="first"
+                    withShadow
+                    autoFocus
+                    containerStyle={styles.phoneContainer}
+                    textContainerStyle={styles.textInput}
+                    onChangeFormattedText={text => {
+                        setphoneNumber(text);
+                    }}
+                />
+            </View>
             <View>
                 <TouchableOpacity style={styles.btncontainer}>
                     <Text style={styles.btn}>Continuer</Text>
@@ -33,11 +50,6 @@ const Connexion = () => {
     )
 }
 const styles = StyleSheet.create({
-    container1: {
-        width: "100%",
-        height: "100%",
-    },
-
     logo: {
         width: 93,
         height: 90,
@@ -64,7 +76,7 @@ const styles = StyleSheet.create({
         height: 21,
         width: 147,
         left: 140,
-        top: 117,
+        top: 120,
         fontFamily: "Poppins",
         fontSize: 14,
         fontWeight: 500,
@@ -72,19 +84,29 @@ const styles = StyleSheet.create({
         opacity: 50,
     },
     container: {
-        left: 40,
-        top: 200,
-    },
-    phoneContainer: {
+
+        position: "absolute",
+        justifyContent: 'center',
+        alignItems: 'center',
         width: 295,
         height: 48,
+
+    },
+    phoneContainer: {
+        top: 390,
+        left: 55,
+        width: 295,
+        height: 48,
+    },
+    textInput: {
+        paddingVertical: 0,
     },
     btncontainer: {
         height: 50,
         width: 282,
         left: 70,
         bottom: 256,
-        top: 350,
+        top: 340,
         padding: 10,
         backgroundColor: "#00BEAD",
         borderRadius: 10,
@@ -104,7 +126,7 @@ const styles = StyleSheet.create({
     footer: {
         flexDirection: "row",
         left: 70,
-        top: 360,
+        top: 350,
     },
     footer1: {
         width: 206,
