@@ -1,23 +1,27 @@
-import React from 'react'
-import { TouchableOpacity, View, Text, StyleSheet, TextInput } from 'react-native'
-
-const Prenom = () => {
-    return (
-        <View>
-            <Text style={styles.no}>1/15</Text>
-            <Text style={styles.text}>Prénom</Text>
-            <Text style={styles.text2}>Entrez votre prénom</Text>
-            <View style={styles.input}>
-                <TextInput style={styles.inputtext} placeholder='Cypher|'> </TextInput>
-            </View>
-            <View >
-                <TouchableOpacity style={styles.btn}><Text style={styles.btntext}>Continuer</Text></TouchableOpacity>
-            </View>
-        </View>
-    )
-}
+import { StyleSheet } from "react-native"
+import Color from "../../Constants/Color";
 
 const styles = StyleSheet.create({
+    backtext: {
+        position: "absolute",
+        left: 52,
+        top: 59,
+        width: 35,
+        height: 21,
+        fontStyle: "normal",
+        fontFamily: "Poppins",
+        fontSize: 14,
+        fontWeight: 500,
+        lineHeight: 21,
+        color: Color.primary,
+    },
+    backArrow: {
+        position: "absolute",
+        width: 17,
+        height: 18,
+        left: 29.92,
+        top: 60.83,
+    },
     no: {
         position: "absolute",
         width: 30,
@@ -29,7 +33,7 @@ const styles = StyleSheet.create({
         lineHeight: 21,
         fontSize: 14,
         fontStyle: "normal",
-        color: "#333453",
+        color: Color.secondary,
         opacity: 0.5,
     },
     text: {
@@ -43,7 +47,7 @@ const styles = StyleSheet.create({
         fontWeight: 600,
         fontSize: 24,
         lineHeight: 36,
-        color: "#333453"
+        color: Color.secondary,
     },
     text2: {
         position: "absolute",
@@ -56,7 +60,7 @@ const styles = StyleSheet.create({
         fontWeight: 500,
         fontSize: 14,
         lineHeight: 21,
-        color: "#333453",
+        color: Color.secondary,
         opacity: 0.5
     },
     input: {
@@ -78,11 +82,11 @@ const styles = StyleSheet.create({
         height: 50,
         left: 27,
         top: 650,
-        backgroundColor: "#00BEAD",
+        backgroundColor: Color.primary,
         borderRadius: 10,
     },
     btntext: {
-        color: "#FFFFFF",
+        color: Color.text,
         fontFamily: "Poppins",
         fontSize: 16,
         fontWeight: "600",
@@ -92,4 +96,4 @@ const styles = StyleSheet.create({
         top: 10,
     }
 })
-export default Prenom
+export default styles;

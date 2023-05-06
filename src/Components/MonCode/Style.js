@@ -1,31 +1,26 @@
-import React from 'react'
-import { View, Text, StyleSheet, TouchableOpacity, TextInput } from 'react-native'
-
-const MonCode = () => {
-
-    return (
-        <View>
-            <View>
-                <Text style={styles.heading}>Mon Code</Text>
-                <Text style={styles.headingtext}>Rentrer le code à 6 chiffres reçu par SMS.</Text>
-            </View>
-            <TextInput
-                style={styles.inputBox}
-                keyboardType="number-pad"
-                maxLength={1}
-
-            />
-            <Text style={styles.textotp}>Renvoyer le code</Text>
-            <View>
-                <TouchableOpacity style={styles.btncontainer}>
-                    <Text style={styles.btn}>Continuer</Text>
-                </TouchableOpacity>
-            </View>
-        </View>
-
-    )
-}
+import { StyleSheet } from "react-native";
+import Color from "../../Constants/Color";
 const styles = StyleSheet.create({
+    backtext: {
+        position: "absolute",
+        left: 52,
+        top: 59,
+        width: 35,
+        height: 21,
+        fontStyle: "normal",
+        fontFamily: "Poppins",
+        fontSize: 14,
+        fontWeight: 500,
+        lineHeight: 21,
+        color: Color.primary,
+    },
+    backArrow: {
+        position: "absolute",
+        width: 17,
+        height: 18,
+        left: 29.92,
+        top: 60.83,
+    },
     heading: {
         position: "absolute",
         height: 36,
@@ -37,7 +32,7 @@ const styles = StyleSheet.create({
         fontSize: 24,
         fontWeight: 600,
         lineHeight: 36,
-        color: "#333453"
+        color: Color.secondary,
     },
     headingtext: {
         position: "absolute",
@@ -50,7 +45,7 @@ const styles = StyleSheet.create({
         fontSize: 14,
         fontWeight: 500,
         lineHeight: 21,
-        color: "#333453",
+        color: Color.secondary,
         opacity: 0.5
 
     },
@@ -72,7 +67,7 @@ const styles = StyleSheet.create({
         fontWeight: 500,
         fontSize: 14,
         lineHeight: 21,
-        color: "#00BEAD",
+        color: Color.primary,
     },
     btncontainer: {
         position: "absolute",
@@ -82,7 +77,7 @@ const styles = StyleSheet.create({
         bottom: 256,
         top: 457,
         padding: 10,
-        backgroundColor: "#00BEAD",
+        backgroundColor: Color.primary,
         borderRadius: 10,
 
     },
@@ -93,9 +88,9 @@ const styles = StyleSheet.create({
         fontWeight: 600,
         fontStyle: "normal",
         lineHeight: 24,
-        color: "#FFFFFF",
+        color: Color.text,
         textAlign: "center",
     },
 })
-export default MonCode
 
+export default styles;

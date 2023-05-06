@@ -1,25 +1,26 @@
-import React from 'react'
-import { StyleSheet, View, Text, TouchableOpacity } from 'react-native'
-
-const Sexe = () => {
-    return (
-        <View>
-            <Text style={styles.no}>2/15</Text>
-            <Text style={styles.heading}>Sexe</Text>
-
-            <TouchableOpacity style={styles.btn1}>
-                <Text style={styles.btntext1}>Man</Text>
-            </TouchableOpacity>
-            <TouchableOpacity style={styles.btn2}>
-                <Text style={styles.btntext2}>Woman</Text>
-            </TouchableOpacity>
-            <TouchableOpacity style={styles.btn}>
-                <Text style={styles.btntext}>Continuer</Text>
-            </TouchableOpacity>
-        </View>
-    )
-}
+import { StyleSheet } from "react-native";
+import Color from "../../Constants/Color";
 const styles = StyleSheet.create({
+    backtext: {
+        position: "absolute",
+        left: 52,
+        top: 59,
+        width: 35,
+        height: 21,
+        fontStyle: "normal",
+        fontFamily: "Poppins",
+        fontSize: 14,
+        fontWeight: 500,
+        lineHeight: 21,
+        color: Color.primary,
+    },
+    backArrow: {
+        position: "absolute",
+        width: 17,
+        height: 18,
+        left: 29.92,
+        top: 60.83,
+    },
     no: {
         position: "absolute",
         width: 32,
@@ -31,7 +32,7 @@ const styles = StyleSheet.create({
         lineHeight: 21,
         fontSize: 14,
         fontStyle: "normal",
-        color: "#333453",
+        color: Color.secondary,
         opacity: 0.5,
     },
     heading: {
@@ -45,7 +46,7 @@ const styles = StyleSheet.create({
         fontWeight: 600,
         fontSize: 24,
         lineHeight: 36,
-        color: "#333453"
+        color: Color.secondary
     },
     btn1: {
         position: "absolute",
@@ -53,7 +54,7 @@ const styles = StyleSheet.create({
         height: 50,
         left: 43,
         top: 208,
-        borderColor: "#00BEAD",
+        borderColor: Color.primary,
         borderWidth: 1,
         borderRadius: 10,
     },
@@ -65,7 +66,7 @@ const styles = StyleSheet.create({
         lineHeight: 24,
         fontSize: 16,
         fontStyle: "normal",
-        color: "#00BEAD",
+        color: Color.primary,
         top: 10,
 
     },
@@ -75,7 +76,7 @@ const styles = StyleSheet.create({
         height: 50,
         left: 44,
         top: 269,
-        borderColor: "#00BEAD",
+        borderColor: Color.primary,
         borderWidth: 1,
         borderRadius: 10,
     },
@@ -86,7 +87,7 @@ const styles = StyleSheet.create({
         lineHeight: 24,
         fontSize: 16,
         fontStyle: "normal",
-        color: "#00BEAD",
+        color: Color.primary,
         top: 10,
     },
     btn: {
@@ -95,11 +96,11 @@ const styles = StyleSheet.create({
         height: 50,
         left: 27,
         top: 722,
-        backgroundColor: "#00BEAD",
+        backgroundColor: Color.primary,
         borderRadius: 10,
     },
     btntext: {
-        color: "#FFFFFF",
+        color: Color.text,
         fontFamily: "Poppins",
         fontSize: 16,
         fontWeight: "600",
@@ -110,4 +111,4 @@ const styles = StyleSheet.create({
     }
 
 })
-export default Sexe
+export default styles;
