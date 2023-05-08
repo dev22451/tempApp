@@ -1,16 +1,10 @@
-import React from 'react';
-import { View } from 'react-native';
-import SplashScreen from './Components/Muslove/SplashScreen';
-
-
-
+import React from "react";
+import Navigation from "./src/Navigation/Navigation";
 
 const App = () => {
   return (
-    <View>
-      <SplashScreen />
-    </View>
-  );
-};
+    <Navigation />
+  )
+}
 
 export default App;
