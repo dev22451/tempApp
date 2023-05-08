@@ -24,7 +24,7 @@ const Localistion = ({ navigation }) => {
                 <Text style={styles.text3}>Demander à utiliser votre position</Text>
             </View>
             <View >
-                <TouchableOpacity style={styles.btn}>
+                <TouchableOpacity style={styles.btn} onPress={() => navigation.navigate("profile")}>
                     <Text style={styles.btntext}>Autoriser la localisation</Text>
                 </TouchableOpacity>
             </View>

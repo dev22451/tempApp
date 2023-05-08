@@ -1,27 +1,33 @@
 import React from 'react'
-import { View, Text, FlatList, TouchableOpacity, Image } from 'react-native';
+import { TouchableOpacity, View, Text, FlatList, Image } from 'react-native'
 import BouncyCheckbox from "react-native-bouncy-checkbox";
+import { backArrow } from '../../Assets/Images/index/img'
 import styles from './Style';
-import { backArrow } from '../../Assets/Images/index/img';
 
-
-const Nationalite = ({ navigation }) => {
-
-    const City = [
+const Physique = ({ navigation }) => {
+    const physique = [
         {
             id: 0,
-            title: "Algérienne",
+            title: "Mince",
         },
         {
             id: 1,
-            title: "Marocaine",
+            title: "Musclé",
         },
         {
             id: 2,
-            title: "Tunisienne",
+            title: "Normal",
         },
         {
             id: 3,
+            title: "Quelques formes",
+        },
+        {
+            id: 4,
+            title: "Enrobé",
+        },
+        {
+            id: 5,
             title: "Autre",
         },
     ];
@@ -31,7 +37,7 @@ const Nationalite = ({ navigation }) => {
                 <View style={styles.checkbox}>
                     <BouncyCheckbox
                         style={styles.checkbox1}
-                        size={30}
+                        size={29}
                         fillColor="black"
                         unfillColor="#FFFFFF"
                     />
@@ -42,28 +48,28 @@ const Nationalite = ({ navigation }) => {
     );
     return (
         <View>
-            <View >
-                <TouchableOpacity onPress={() => navigation.navigate("birth")}>
+            <View>
+                <TouchableOpacity onPress={() => navigation.navigate("pratiquant")}>
                     <Image source={backArrow} style={styles.backArrow} />
                     <Text style={styles.backtext}>Back</Text>
                 </TouchableOpacity>
-                <TouchableOpacity onPress={() => navigation.navigate("location")}>
+                <TouchableOpacity onPress={() => navigation.navigate("taille")}>
                     <Text style={styles.skiptext}>Skip</Text>
                 </TouchableOpacity>
             </View>
-            <Text style={styles.no}>4/15</Text>
-            <Text style={styles.text}>Nationalité</Text>
-            <Text style={styles.text2}>Choisis ton pays</Text>
+            <Text style={styles.no}>11/15</Text>
+            <Text style={styles.text}>Physique</Text>
+            <Text style={styles.text2}>Choisissez votre physique</Text>
             <View style={styles.list}>
                 <FlatList
-                    data={City}
+                    data={physique}
 
                     renderItem={({ item }) => <Item title={item.title} />}
                     keyExtractor={item => item.id}
                 />
             </View>
             <View >
-                <TouchableOpacity style={styles.btn} onPress={() => navigation.navigate("location")}>
+                <TouchableOpacity style={styles.btn} onPress={() => navigation.navigate("taille")} >
                     <Text style={styles.btntext}>Continuer</Text>
                 </TouchableOpacity>
             </View>
@@ -71,4 +77,5 @@ const Nationalite = ({ navigation }) => {
     )
 }
 
-export default Nationalite;
+
+export default Physique;

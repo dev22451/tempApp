@@ -1,4 +1,4 @@
-import { StyleSheet } from "react-native";
+import { StyleSheet } from "react-native"
 import Color from "../../Constants/Color";
 
 const styles = StyleSheet.create({
@@ -37,7 +37,7 @@ const styles = StyleSheet.create({
     },
     no: {
         position: "absolute",
-        width: 32,
+        width: 30,
         height: 21,
         left: 43,
         top: 103,
@@ -51,7 +51,7 @@ const styles = StyleSheet.create({
     },
     text: {
         position: 'absolute',
-        width: 135,
+        width: 175,
         height: 36,
         left: 40,
         top: 132,
@@ -64,7 +64,7 @@ const styles = StyleSheet.create({
     },
     text2: {
         position: "absolute",
-        width: 117,
+        width: 187,
         height: 21,
         left: 40,
         top: 176,
@@ -76,30 +76,25 @@ const styles = StyleSheet.create({
         color: Color.secondary,
         opacity: 0.5
     },
-    list: {
-        position: "absolute",
-        left: 35,
-        top: 237,
+    input: {
+        left: 38,
+        top: 271,
+        width: 280,
+        borderBottomWidth: 0.2,
+
+
 
     },
-    title: {
-        marginVertical: 24,
-        fontFamily: "Poppins",
-        fontStyle: "normal",
-        fontWeight: 500,
-        fontSize: 18,
-        lineHeight: 27,
-        color: Color.secondary,
-    },
-    checkbox1: {
+    inputtext: {
+        fontSize: 20,
         top: 9,
     },
     btn: {
         position: "absolute",
         width: 345,
         height: 50,
-        left: 27,
-        top: 700,
+        left: 33,
+        top: 670,
         backgroundColor: Color.primary,
         borderRadius: 10,
     },
@@ -113,6 +108,5 @@ const styles = StyleSheet.create({
         textAlign: "center",
         top: 10,
     }
-
 })
 export default styles;
