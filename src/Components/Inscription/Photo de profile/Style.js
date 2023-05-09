@@ -1,5 +1,7 @@
 import { StyleSheet } from "react-native";
-import Color from "../../Constants/Color";
+import Color from "../../../Constants/Color";
+
+
 const styles = StyleSheet.create({
     backtext: {
         position: "absolute",
@@ -21,80 +23,74 @@ const styles = StyleSheet.create({
         left: 29.92,
         top: 60.83,
     },
-    heading: {
+    no: {
         position: "absolute",
-        height: 36,
-        width: 124,
-        left: 40,
+        width: 32,
+        height: 21,
+        left: 43,
         top: 103,
-        fontStyle: "normal",
         fontFamily: "Poppins",
-        fontSize: 24,
         fontWeight: 600,
+        lineHeight: 21,
+        fontSize: 14,
+        fontStyle: "normal",
+        color: Color.secondary,
+        opacity: 0.5,
+    },
+    text: {
+        position: 'absolute',
+        width: 176,
+        height: 36,
+        left: 40,
+        top: 132,
+        fontFamily: "Poppins",
+        fontStyle: "normal",
+        fontWeight: 600,
+        fontSize: 24,
         lineHeight: 36,
         color: Color.secondary,
     },
-    headingtext: {
+    text2: {
         position: "absolute",
-        width: 287,
+        width: 133,
         height: 21,
         left: 40,
-        top: 147,
-        fontStyle: "normal",
+        top: 176,
         fontFamily: "Poppins",
-        fontSize: 14,
+        fontStyle: "normal",
         fontWeight: 500,
+        fontSize: 14,
         lineHeight: 21,
         color: Color.secondary,
         opacity: 0.5
+    },
+    checkbox: {
+        // position: "absolute",
+        top: 508,
+        left: 33,
+        borderRadius: 0,
 
     },
-    otp: {
+    text3: {
         position: "absolute",
-        top: 215,
-        left: 40,
-    },
-    title: {
-        textAlign: 'center',
-        fontSize: 30
-    },
-    cellRoot: {
-        width: 50,
-        height: 50,
-        justifyContent: 'center',
-        alignItems: 'center',
-        borderBottomColor: '#ccc',
-        borderBottomWidth: 1,
-    },
-    cellText: {
-        top: 3,
-        color: Color.secondary,
-        fontSize: 30,
-        textAlign: 'center',
-    },
-    focusCell: {
-        borderBottomColor: Color.primary,
-        borderBottomWidth: 2,
-    },
-    textotp: {
-        position: "absolute",
-        top: 290,
-        left: 40,
-        width: 121,
-        height: 21,
+        top: 504,
+        left: 76,
+        width: 142,
+        height: 27,
         fontFamily: "Poppins",
+        fontStyle: "normal",
         fontWeight: 500,
-        fontSize: 14,
-        lineHeight: 21,
-        color: Color.primary,
+        fontSize: 18,
+        lineHeight: 27,
+        color: Color.secondary,
+
     },
     btncontainer: {
         position: "absolute",
         height: 50,
         width: 345,
         left: 33,
-        bottom: 256,
-        top: 457,
+        top: 702,
         padding: 10,
         backgroundColor: Color.primary,
         borderRadius: 10,
@@ -110,10 +106,6 @@ const styles = StyleSheet.create({
         color: Color.text,
         textAlign: "center",
     },
-
-
-
-
 })
 
 export default styles;

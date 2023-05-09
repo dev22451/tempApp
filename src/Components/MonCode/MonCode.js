@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react'
+import React, { useState } from 'react'
 import { View, Text, TouchableOpacity, TextInput, Image } from 'react-native'
 import { CodeField, Cursor, useBlurOnFulfill, useClearByFocusCell, } from 'react-native-confirmation-code-field';
 import styles from './Style'
@@ -38,7 +38,6 @@ const MonCode = ({ navigation }) => {
                     textContentType="oneTimeCode"
                     renderCell={({ index, symbol, isFocused }) => (
                         <View
-                            // Make sure that you pass onLayout={getCellOnLayoutHandler(index)} prop to root component of "Cell"
                             onLayout={getCellOnLayoutHandler(index)}
                             key={index}
                             style={[styles.cellRoot, isFocused && styles.focusCell]}>

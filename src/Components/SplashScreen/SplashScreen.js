@@ -12,7 +12,7 @@ const SplashScreen = ({ navigation }) => {
                 <Image source={firstpageText}
                     style={styles.text}
                 />
-                <TouchableOpacity style={styles.login}>
+                <TouchableOpacity style={styles.login} onPress={() => navigation.navigate("login")}>
                     <Text style={styles.logintext}>Login</Text>
                 </TouchableOpacity>
                 <TouchableOpacity style={styles.newaccount} onPress={() => navigation.navigate("Connexion")}>

@@ -1,0 +1,116 @@
+import { StyleSheet } from "react-native";
+import Color from "../../../Constants/Color";
+
+
+const styles = StyleSheet.create({
+    backtext: {
+        position: "absolute",
+        left: 52,
+        top: 59,
+        width: 35,
+        height: 21,
+        fontStyle: "normal",
+        fontFamily: "Poppins",
+        fontSize: 14,
+        fontWeight: 500,
+        lineHeight: 21,
+        color: Color.primary,
+    },
+    backArrow: {
+        position: "absolute",
+        width: 17,
+        height: 18,
+        left: 29.92,
+        top: 60.83,
+    },
+    no: {
+        position: "absolute",
+        width: 32,
+        height: 21,
+        left: 43,
+        top: 103,
+        fontFamily: "Poppins",
+        fontWeight: 600,
+        lineHeight: 21,
+        fontSize: 14,
+        fontStyle: "normal",
+        color: Color.secondary,
+        opacity: 0.5,
+    },
+    heading: {
+        position: "absolute",
+        width: 58,
+        height: 36,
+        left: 40,
+        top: 132,
+        fontFamily: "Poppins",
+        fontStyle: "normal",
+        fontWeight: 600,
+        fontSize: 24,
+        lineHeight: 36,
+        color: Color.secondary
+    },
+    btn1: {
+        position: "absolute",
+        width: 295,
+        height: 50,
+        left: 43,
+        top: 208,
+        borderColor: Color.primary,
+        borderWidth: 1,
+        borderRadius: 10,
+    },
+    btntext1: {
+
+        textAlign: "center",
+        fontFamily: "Poppins",
+        fontWeight: 600,
+        lineHeight: 24,
+        fontSize: 16,
+        fontStyle: "normal",
+        color: Color.primary,
+        top: 10,
+
+    },
+    btn2: {
+        position: "absolute",
+        width: 295,
+        height: 50,
+        left: 44,
+        top: 269,
+        borderColor: Color.primary,
+        borderWidth: 1,
+        borderRadius: 10,
+    },
+    btntext2: {
+        textAlign: "center",
+        fontFamily: "Poppins",
+        fontWeight: 600,
+        lineHeight: 24,
+        fontSize: 16,
+        fontStyle: "normal",
+        color: Color.primary,
+        top: 10,
+    },
+    btn: {
+        position: "absolute",
+        width: 345,
+        height: 50,
+        left: 27,
+        top: 722,
+        backgroundColor: Color.primary,
+        borderRadius: 10,
+    },
+    btntext: {
+        color: Color.text,
+        fontFamily: "Poppins",
+        fontSize: 16,
+        fontWeight: "600",
+        fontStyle: "normal",
+        lineHeight: 24,
+        textAlign: "center",
+        top: 10,
+    }
+
+})
+export default styles;
